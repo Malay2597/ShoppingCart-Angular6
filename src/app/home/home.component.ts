@@ -28,8 +28,13 @@ export class HomeComponent implements OnInit {
         });
     }
     AddItem(product) {
-      
+        if(!product.selectedSize)
+        {
+            alert("select any one of the sizes");
+        }
+        else
+        {
         this.productservice.sendProducts(product,product.selectedSize);
-    }
+    }}
     
 }
