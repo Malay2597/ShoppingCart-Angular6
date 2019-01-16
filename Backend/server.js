@@ -95,24 +95,24 @@ app.post("/addProducts", async function (req, res) {
 
 //Read File
 readingProductData = async () => {
-  const data = await readFile('C:/Users/shahm/OneDrive - Paul Mason Consulting/Shopping-Cart/src/assets/products.json', 'utf-8');
+  const data = await readFile('G:/cart/ShoppingCart-Angular6/src/assets/products.json', 'utf-8');
   return JSON.parse(data.toString());
 }
 
 readingUserData = async () => {
-  const data = await readFile('C:/Users/shahm/OneDrive - Paul Mason Consulting/Shopping-Cart/src/assets/users.json', 'utf-8');
+  const data = await readFile('G:/cart/ShoppingCart-Angular6/src/assets/users.json', 'utf-8');
   return JSON.parse(data.toString());
 }
 
 readingTransactionData = async () => {
-  const data = await readFile('C:/Users/shahm/OneDrive - Paul Mason Consulting/Shopping-Cart/src/assets/transaction.json', 'utf-8');
+  const data = await readFile('G:/cart/ShoppingCart-Angular6/src/assets/transaction.json', 'utf-8');
   return JSON.parse(data.toString());
 }
 
 //Write In File
 writeInTransactionData = async (obj) => {
   try {
-    await writeFile('C:/Users/shahm/OneDrive - Paul Mason Consulting/Shopping-Cart/src/assets/transaction.json', obj);
+    await writeFile('G:/cart/ShoppingCart-Angular6/src/assets/transaction.json', obj);
     return 'success';
   } catch (err) {
     throw "error";
@@ -121,7 +121,7 @@ writeInTransactionData = async (obj) => {
 
 writeInProductData = async (obj) => {
   try {
-    await writeFile('C:/Users/shahm/OneDrive - Paul Mason Consulting/Shopping-Cart/src/assets/products.json', obj);
+    await writeFile('G:/cart/ShoppingCart-Angular6/src/assets/products.json', obj);
     return 'success';
   } catch (err) {
     throw "error";
