@@ -1,0 +1,72 @@
+<html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div style="width:50%" class="container">
+        <form name="form" (ngSubmit)="f.form.valid?onSubmit():''" #f="ngForm">
+
+            <h1 style="text-align: center">Add Product</h1>
+
+            <hr>
+
+            <div class="form-group">
+
+                <input type="number" placeholder="Enter Product ID" class="form-control" name="Id" [(ngModel)]="Form.P_id" #Id="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && Id.invalid }" PName required />
+                <div *ngIf="f.submitted && Id.invalid" class="invalid-feedback">
+                    <div *ngIf="Id.errors.required">Id is required</div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+
+                <input type="text" placeholder="Enter Product Image Source" class="form-control" name="Image" [(ngModel)]="Form.imgSrc" #Image="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && Image.invalid }" required ngModel pattern="assets/[a-zA-Z1-9]*.(png|jpg)$"
+                />
+                <div *ngIf="f.submitted && Image.invalid" class="invalid-feedback">
+                    <div *ngIf="Image.errors.required">Image SRC is required</div>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <input type="text" placeholder="Enter Product Name" class="form-control" name="PName" [(ngModel)]="Form.name" #PName="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && PName.invalid }" PName required />
+                <div *ngIf="f.submitted && PName.invalid" class="invalid-feedback">
+                    <div *ngIf="PName.errors.required">Name is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="number" placeholder="Enter Product Price" class="form-control" [(ngModel)]="Form.price" name='PPrice' #PPrice='ngModel'
+                    required>
+                <div *ngIf="f.submitted && !PPrice.valid" class="alert alert-danger">
+                    <div *ngIf="PPrice.errors.required">Price is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" style="padding:7px;" placeholder="Check Size Applicable" readonly>
+                <input style="margin-left:20px;" type="checkbox" value="S" [(ngModel)]="S_size" name="checkbox">S
+                <input style="margin-left:20px;" type="checkbox" [(ngModel)]="M_size" name="checkbox">M
+                <input style="margin-left:20px;" type="checkbox" [(ngModel)]="L_size" name="checkbox">L
+
+            </div>
+
+            <hr>
+
+            <button type="submit" class="registerbtn">ADD PRODUCT</button>
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>

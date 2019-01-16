@@ -1,0 +1,82 @@
+[
+    {
+        "T_id": 1,
+        "transaction": [
+            {
+                "id": 1,
+                "name": "Nike Football",
+                "price": 3500,
+                "quantity": 1,
+                "size": "S",
+                "P_total": 3500
+            }
+        ],
+        "T_total": 3500
+    },
+    {
+        "T_id": 2,
+        "transaction": [
+            {
+                "id": 1,
+                "name": "Nike Football",
+                "price": 3500,
+                "quantity": 1,
+                "size": "S",
+                "P_total": 3500
+            },
+            {
+                "id": 2,
+                "name": "Nike Mercurial",
+                "price": 5500,
+                "quantity": 1,
+                "size": "M",
+                "P_total": 5500
+            }
+        ],
+        "T_total": 9000
+    },
+    {
+        "T_id": 3,
+        "transaction": [
+            {
+                "id": 1,
+                "name": "Nike Football",
+                "price": 3500,
+                "quantity": 1,
+                "size": "M",
+                "P_total": 3500
+            },
+            {
+                "id": 2,
+                "name": "Nike Mercurial",
+                "price": 5500,
+                "quantity": 1,
+                "size": "L",
+                "P_total": 5500
+            },
+            {
+                "id": 3,
+                "name": "Nike hoodie",
+                "price": 7500,
+                "quantity": 1,
+                "size": "S",
+                "P_total": 7500
+            }
+        ],
+        "T_total": 16500
+    },
+    {
+        "T_id": 4,
+        "transaction": [
+            {
+                "id": 1,
+                "name": "Nike Football",
+                "price": 3500,
+                "quantity": null,
+                "size": "M",
+                "P_total": 0
+            }
+        ],
+        "T_total": 0
+    }
+]

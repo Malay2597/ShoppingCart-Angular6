@@ -1,0 +1,16 @@
+<h1 style="text-align: center;">ADMIN PANEL</h1>
+<nav class="navbar navbar-dark bg-dark">
+
+
+    <form class="form-inline">
+      <button (click)="enableProduct()" class="btn btn-outline-success" type="button">Add Product</button>
+      <button  (click)="enableTransaction()" style="margin-left:50px;" class="btn btn-sm btn-outline-secondary" type="button">List Transaction</button>
+    
+      <button style="margin-left:50px;" routerLink="/transaction" class="btn btn-sm btn-outline-secondary" type="button">List Products</button>
+      <button style="margin-left:750px ;" class="btn btn-outline-danger" (click)="Logout()">LOGOUT</button>
+    </form>
+
+  </nav>
+
+  <app-admin-product *ngIf="showProduct"></app-admin-product>
+  <app-admin-transaction *ngIf="showTransaction"></app-admin-transaction>

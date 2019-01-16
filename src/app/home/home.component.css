@@ -1,0 +1,24 @@
+.titles
+{
+    width: 100%;
+    height: 140px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+.card-title
+{
+    margin-top: 20px;
+    font-size: 25px;
+}
+.card-text
+{
+    font-size: 20px;
+}
+.cart
+{
+    float: right;
+    widows: 50px; 
+}
+

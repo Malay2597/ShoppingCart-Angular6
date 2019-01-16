@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<div style="width:750px;margin-left:250px;margin-top: 25px; ">
+   
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>ProductName</th>
+            <th>Price</th>
+            <th>Size</th>
+            <th>Quantity</th>
+            <th>Product Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of CartProducts;let i of index ">
+            <td>{{p.name}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.size}}</td>
+            <td>
+                <input type="number" (ngModelChange)="UpdateQuantity($event,p.id)"
+                min="1" oninput="validity.valid||(value='1')" [(ngModel)]="p.quantity" [readonly]="!(enableEdit==i)" required/>
+                <i style="margin-left: 15px;font-size: 20px;color: blue" (click)="Enable(i)" class="icon-edit"></i>
+                <i style="margin-left: 15px;font-size:25px;color:red" (click)="Delete(p.id)" class="icon-trash"></i>
+            </td>
+            <td>{{p.price*p.quantity}}</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+<div [hidden]="enableTotal" style="margin-left:625px;">
+    TOTAL
+    <input type="text" size="5" [value]="getTotal()" readonly>
+</div>
+</div>
+<div style="float:right ;margin-top:25px;margin-right:50px">
+    <button class="btn btn-success" (click)="checkout()" >CHECKOUT</button>
+</div>

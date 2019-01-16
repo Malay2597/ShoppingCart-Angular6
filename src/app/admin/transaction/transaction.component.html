@@ -1,0 +1,60 @@
+<h2>Transactions List</h2>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th rowspan="2">Transaction Id</th>
+            <th>Transactions</th>
+            <th rowspan="2">Total</th>
+        </tr>
+        <th><span class="name-price">ID</span>
+            <span class="name">Name</span>
+            <span class="name-price">Price</span>
+            <span class="name">Quantity</span>
+            <span>ProductTotal</span>
+        </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of Transactions ">
+            <td>{{p.T_id}}</td>
+            <td>
+                <div>
+                    <table class="table table-striped">
+                        <tr *ngFor="let t of p.transaction">
+                            <td>{{t.id}}</td>
+                            <td >{{t.name}}</td>
+                            <td >{{t.price}}</td>
+                            <td>{{t.quantity}}</td>
+                            <td >{{t.P_total}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>{{p.T_total}}</td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+<style>
+    .name {
+        padding: 100px;
+        margin-left: 25px;
+
+    }
+
+    .name-price
+    {
+        margin-left: 140px;
+    }
+    td {
+        color:darkgreen;
+        margin-left: 25px;
+        padding-left: 90px;
+    }
+
+    th {
+        text-align: center;
+    }
+</style>    

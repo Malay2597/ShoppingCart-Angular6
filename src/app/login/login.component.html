@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <form name="form" >
+        <div class="container">
+            <h1>ADMIN LOGIN</h1> <img style="margin-left: 520px;" src="https://img.icons8.com/color/50/000000/user-male-circle.png">
+            <hr>
+            <div class="form-group">
+                <input type="text" placeholder="Enter Email" class="form-control" name="email" [(ngModel)]="Username" />
+
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Enter Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"
+                    name="psw" required>
+            </div>
+            <hr>
+
+
+            <button type="submit" class="registerbtn" (click)="Validate(Username,password)">SIGN IN</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

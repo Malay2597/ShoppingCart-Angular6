@@ -1,0 +1,54 @@
+[
+    {
+        "P_id": 1,
+        "imgSrc": "assets/football.png",
+        "name": "Nike Football",
+        "price": 3500,
+        "P_size": [
+            "S",
+            "M"
+        ]
+    },
+    {
+        "P_id": 2,
+        "imgSrc": "assets/shoes.png",
+        "name": "Nike Mercurial",
+        "price": 5500,
+        "P_size": [
+            "S",
+            "M",
+            "L"
+        ]
+    },
+    {
+        "P_id": 3,
+        "imgSrc": "assets/hoodie.png",
+        "name": "Nike hoodie",
+        "price": 7500,
+        "P_size": [
+            "S",
+            "M",
+            "L"
+        ]
+    },
+    {
+        "P_id": 4,
+        "imgSrc": "assets/tracks.png",
+        "name": "Nike track",
+        "price": 6500,
+        "P_size": [
+            "S",
+            "M",
+            "L"
+        ]
+    },
+    {
+        "P_id": 5,
+        "imgSrc": "assets/a.png",
+        "name": "Nike Bag",
+        "price": 2000,
+        "P_size": [
+            "S"
+        ]
+    }
+]

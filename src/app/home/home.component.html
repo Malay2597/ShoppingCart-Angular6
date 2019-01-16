@@ -1,0 +1,29 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<div class="titles">
+   <h1>Welcome to the Real Mart</h1>
+   <img style="float:left" [routerLink]="['/login']" src="https://img.icons8.com/color/50/000000/user-male-circle.png">
+            <a [routerLink]="['/cart']" style="float:right;width:50px;height:40px"  class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-shopping-cart"></span> 
+                  </a>
+    
+  </div>
+
+  <div *ngFor="let product of Products" class="card" style="width: 30rem;float: left;margin-left: 25px;margin-top:25px;">
+    
+    <div class="card-body">
+      <img  height="250" width="250" src={{product.imgSrc}} class="card-img-top" alt="...">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">Price : {{product.price}}</p>
+      <p class="card-text">
+      <select *ngIf="product.P_size"  [(ngModel)]="product.selectedSize" ngOnChange="xyz(product,selectedSize)" >
+        <option  *ngFor="let s of product.P_size">{{s}}</option>
+      </select>
+    </p>
+    <p class="card-text">
+      <button class="btn btn-success" [disabled]="disable" (click)="AddItem(product)">ADD TO CART</button>
+    </p>
+    </div>
+  </div>
+
